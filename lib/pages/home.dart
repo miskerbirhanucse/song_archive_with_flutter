@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,6 +27,7 @@ class _HomePageState extends State<HomePage> {
     Color(0xff808080),
     Color(0xffd85a7f),
     Color(0xff6e5d6a),
+    Color(0xff735f3d),
     // Color(0xff101820),
   ];
   int? _isFavorite;
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                               final update = _songsList[index];
                               update.isFavorite = _isFavorite;
 
-                              await songController!.updateSong(update);
+                              await songController.updateSong(update);
                             },
                             icon: const Icon(Icons.favorite),
                             color: (_songsList[index].isFavorite == 1

@@ -24,7 +24,7 @@ class _AddSongPageState extends State<AddSongPage> {
   String? _songStyle;
   String? _songType;
   String? _songKey;
-  int? _songColor;
+  int _songColor=7;
   final _formKey = GlobalKey<FormState>();
   final dropdownState = GlobalKey<FormFieldState>();
   final _scaleDropDown = GlobalKey<FormFieldState>();
@@ -287,7 +287,7 @@ class _AddSongPageState extends State<AddSongPage> {
                         _song.typesong = _songType;
                         _song.keysong = _songKey;
                         _song.songcolor = _songColor;
-                        var result = await songController!.addSong(_song);
+                        var result = await songController.addSong(_song);
 
                         if (result > 0) {
                           Get.toNamed('/home');

@@ -10,10 +10,11 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        padding: const EdgeInsets.only(right: 15),
         children: [
           const DrawerHeader(
-            padding: EdgeInsets.all(15),
-            margin: EdgeInsets.fromLTRB(30, 30, 30, 30),
+            padding: EdgeInsets.only(right: 30),
+            margin: EdgeInsets.only(right: 40,left: 20,top: 50),
             child: Text(''),
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -99,7 +100,7 @@ class AppDrawer extends StatelessWidget {
 
   Widget _buildDivider() {
     return const Divider(
-      thickness: 2.0,
+      thickness: 0.5,
     );
   }
 }

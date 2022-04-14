@@ -74,8 +74,8 @@ class _EditSongState extends State<EditSong> {
     _editTitle = TextEditingController(text: '${widget.editValue.title ?? ''}');
     _editTranspose =
         TextEditingController(text: '${widget.editValue.transpose ?? ''}');
-    
-    
+
+
     _style = widget.editValue.style;
     _songMarefiya = widget.editValue.marefiya;
     _songScale = widget.editValue.scale;
@@ -301,7 +301,7 @@ class _EditSongState extends State<EditSong> {
                 widget.editValue.transpose = _editTranspose!.text;
                 widget.editValue.isFavorite = _isFavorite;
 
-                var result = await songController!.updateSong(widget.editValue);
+                var result = await songController.updateSong(widget.editValue);
                 if (result > 0) {
                   Get.offNamed('/home');
                   Get.snackbar('Successfully', 'Song Updated',
